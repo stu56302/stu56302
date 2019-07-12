@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>St. Guardians of Ardenshire Primary School - About Us Page</title>
+</head>
+<style>
+  
+  img {
+    display: inline-block;
+  }
+
+</style>
+
+</head>
+</body>
+<h1><center><img src="Images/Logo.jpg" alt="Star shaped logo" style="width:100px;height:100px;"
+<h1>St. Guardians of Ardenshire Primary School<img src="Images/Logo.jpg" alt="Star shaped logo" style="width:100px;height:100px;" </center></h1>
+
+<div class="topnav"><a class="active" 
+  <a href="Index.html">Home</a>
+  <a href="About Us 1.html">About Us</a>
+  <a href="Pupils.html">Pupils</a>
+  <a href="Teachers.html">Teachers</a>
+  <a href="Parents.html">Parents</a>
+  <a href="Governors.html">Governors</a>
+  <a href="Partners.html">Partners</a>
+  <a href="Calendar.html">Calendar</a>
+  <a href="Gallery.html">Gallery</a>
+</div>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #7174a5;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f1f1f1;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #bcbcbc;
+  color: #333;
+}
+
+.topnav a.active {
+  background-color: #bcbcbc;
+  color: white;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+  text-align: justify;
+  text-justify: inter-word;
+}
+</style>
+</head>
+<body>
+<center>
+<h1>Calendar</h1>
+</center>
+<html>
+<head>
+</head>
+<body>
+<center>
+<script language="javascript" type="text/javascript">
+var day_of_week = new Array('Sun','Mon','Tue','Wed','Thu','Fri','Sat');
+var month_of_year = new Array('January','February','March','April','May','June','July','August','September','October','November','December');
+
+//  DECLARE AND INITIALIZE VARIABLES
+var Calendar = new Date();
+
+var year = Calendar.getFullYear();     // Returns year
+var month = Calendar.getMonth();    // Returns month (0-11)
+var today = Calendar.getDate();    // Returns day (1-31)
+var weekday = Calendar.getDay();    // Returns day (1-31)
+
+var DAYS_OF_WEEK = 7;    // "constant" for number of days in a week
+var DAYS_OF_MONTH = 31;    // "constant" for number of days in a month
+var cal;    // Used for printing
+
+Calendar.setDate(1);    // Start the calendar day at '1'
+Calendar.setMonth(month);    // Start the calendar month at now
+
+
+/* VARIABLES FOR FORMATTING
+NOTE: You can format the 'BORDER', 'BGCOLOR', 'CELLPADDING', 'BORDERCOLOR'
+      tags to customize your caledanr's look. */
+
+var TR_start = '<TR>';
+var TR_end = '</TR>';
+var highlight_start = '<TD WIDTH="30"><TABLE CELLSPACING=0 BORDER=1 BGCOLOR=DEDEFF BORDERCOLOR=CCCCCC><TR><TD WIDTH=20><B><CENTER>';
+var highlight_end   = '</CENTER></TD></TR></TABLE></B>';
+var TD_start = '<TD WIDTH="30"><CENTER>';
+var TD_end = '</CENTER></TD>';
+
+/* BEGIN CODE FOR CALENDAR
+NOTE: You can format the 'BORDER', 'BGCOLOR', 'CELLPADDING', 'BORDERCOLOR'
+tags to customize your calendar's look.*/
+
+cal =  '<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=0 BORDERCOLOR=BBBBBB><TR><TD>';
+cal += '<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=2>' + TR_start;
+cal += '<TD COLSPAN="' + DAYS_OF_WEEK + '" BGCOLOR="#EFEFEF"><CENTER><B>';
+cal += month_of_year[month]  + '   ' + year + '</B>' + TD_end + TR_end;
+cal += TR_start;
+
+//   DO NOT EDIT BELOW THIS POINT  //
+
+// LOOPS FOR EACH DAY OF WEEK
+for(index=0; index < DAYS_OF_WEEK; index++)
+{
+
+// BOLD TODAY'S DAY OF WEEK
+if(weekday == index)
+cal += TD_start + '<B>' + day_of_week[index] + '</B>' + TD_end;
+
+// PRINTS DAY
+else
+cal += TD_start + day_of_week[index] + TD_end;
+}
+
+cal += TD_end + TR_end;
+cal += TR_start;
+
+// FILL IN BLANK GAPS UNTIL TODAY'S DAY
+for(index=0; index < Calendar.getDay(); index++)
+cal += TD_start + '  ' + TD_end;
+
+// LOOPS FOR EACH DAY IN CALENDAR
+for(index=0; index < DAYS_OF_MONTH; index++)
+{
+if( Calendar.getDate() > index )
+{
+  // RETURNS THE NEXT DAY TO PRINT
+  week_day =Calendar.getDay();
+
+  // START NEW ROW FOR FIRST DAY OF WEEK
+  if(week_day == 0)
+  cal += TR_start;
+
+  if(week_day != DAYS_OF_WEEK)
+  {
+
+  // SET VARIABLE INSIDE LOOP FOR INCREMENTING PURPOSES
+  var day  = Calendar.getDate();
+
+  // HIGHLIGHT TODAY'S DATE
+  if( today==Calendar.getDate() )
+  cal += highlight_start + day + highlight_end + TD_end;
+
+  // PRINTS DAY
+  else
+  cal += TD_start + day + TD_end;
+  }
+
+  // END ROW FOR LAST DAY OF WEEK
+  if(week_day == DAYS_OF_WEEK)
+  cal += TR_end;
+  }
+
+  // INCREMENTS UNTIL END OF THE MONTH
+  Calendar.setDate(Calendar.getDate()+1);
+
+}// end for loop
+
+cal += '</TD></TR></TABLE></TABLE>';
+
+//  PRINT CALENDAR
+document.write(cal);
+
+//  End -->
+</script>
+</center>
+
+
+
+<justify>
+<div><h1>Important Dates</h1> 
+
+<ul>
+<li>12th July 2019 - End of School Year</li>
+<li> 2nd September 2019 - Inset Day </li>
+<li>3rd September 2019 - Start of School Year</li>
+<li>25th October 2019 - Half Term</li>
+<li>4th Novemebr 2019 - Start of Term</li>
+<br>
+<br>
+<br>
+</ul>
+</justify>
+</div>
+</body>
+</html>
+
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {margin:0;}
+
+
+.navbar {
+  overflow: hidden;
+  background-color: #7174a5;  
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f1f1f1;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #bcbcbc;
+  color: #333;
+}
+
+.navbar a.active {
+  background-color: #bcbcbc;
+  color: white;
+}
+
+.navbar .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar a:not(:first-child) {display: none;}
+  .navbar a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    bottom:0;
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+}
+</style>
+</head>
+<body>
+
+<div class="navbar" id="myNavbar">
+  <a href="https://www.facebook.com/gotmD2/?eid=ARAf8XjWfDiWfLCo0f1AaNZeTfr5SvY0I6rh9TzIlfdHHSDqhvmx9w6pefsmkw1uF1EeTc3zhzoOKKx1"target="_blank">Facebook
+  <a href="https://www.twitter.com/OfMisguided"target="_blank">Twitter
+  <a href="https://www.instagram.com/guardiansofthemisguided"target="_blank">Instagram
+ <a href="https://www.bungie.net/en/News"target="_blank">News</a>
+  <a href="Contact Us.html">Contact Us</a>
+  <a href="Site Map.html">Site Map</a>
+<a href="http://www.legislation.gov.uk/ukpga/2018/12/contents/enacted"target="_blank">Data Protection Policy</a>
+  
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myNavbar");
+  if (x.className === "navbar") {
+    x.className += " responsive";
+  } else {
+    x.className = "navbar";
+  }
+}
+</script>
+
+</body>
+</html>
